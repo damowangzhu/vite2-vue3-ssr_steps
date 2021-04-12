@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const express = require('express');
 const { createServer: createViteServer } = require('vite');
+const { json } = require('express');
 
 async function createServer() {
   const app = express();
@@ -27,10 +28,10 @@ async function createServer() {
       const { render } = await vite.ssrLoadModule('/src/entry-server.js');
 
       // 4. render the app HTML.
-      const { appHtml } = await render(url);
+      const { appHtml, state } = await render(url);
 
       // 5. Inject the app-rendered HTML into the template.
-      const html = template.replace(`<!--ssr-outlet-->`, appHtml);
+      const html = template.replace(`<!--ssr-outlet-->`, appHtml).replace(`'<!--vuex-state-->'`, JSON.stringify(state));
 
       // 6. Send the rendered HTML back.
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html);

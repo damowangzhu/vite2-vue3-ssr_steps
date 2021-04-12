@@ -15,9 +15,9 @@ app.use(staticPath(resolve('./dist/client'), { index: false }));
 app.use(async (ctx, next) => {
   const url = ctx.req.url;
   try {
-    const { appHtml } = await render(url, manifest);
+    const { appHtml, state } = await render(url, manifest);
 
-    let html = template.replace(`<!--ssr-outlet-->`, appHtml);
+    const html = template.replace(`<!--ssr-outlet-->`, appHtml).replace(`'<!--vuex-state-->'`, JSON.stringify(state));
 
     ctx.body = html;
   } catch (error) {

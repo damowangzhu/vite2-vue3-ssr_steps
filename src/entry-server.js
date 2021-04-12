@@ -15,10 +15,34 @@ export async function render(url, manifest) {
   app.use(router).use(store);
 
   router.push(url);
-
   await router.isReady();
+
+  const to = router.currentRoute;
+  const matchedRoute = to.value.matched;
+  if (to.value.matched.length === 0) {
+    return '';
+  }
+
+  const matchedComponents = [];
+  matchedRoute.map((route) => {
+    matchedComponents.push(...Object.values(route.components));
+  });
+
+  const asyncDataFuncs = matchedComponents.map((component) => {
+    const asyncData = component.asyncData || null;
+    if (asyncData) {
+      const config = {
+        store,
+        route: to,
+      };
+      return asyncData(config);
+    }
+  });
+
+  await Promise.all(asyncDataFuncs);
 
   const context = {};
   const appHtml = await renderToString(app, context);
-  return { appHtml };
+  const state = store.state;
+  return { appHtml, state };
 }
