@@ -1,0 +1,35 @@
+{
+  "/Users/abc/A/vite2-vue3-ssr_steps/node_modules/@vue/shared/dist/shared.esm-bundler.js": [
+    "/assets/vendor.77a10beb.js"
+  ],
+  "/Users/abc/A/vite2-vue3-ssr_steps/node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [
+    "/assets/vendor.77a10beb.js"
+  ],
+  "/Users/abc/A/vite2-vue3-ssr_steps/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [
+    "/assets/vendor.77a10beb.js"
+  ],
+  "/Users/abc/A/vite2-vue3-ssr_steps/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [
+    "/assets/vendor.77a10beb.js"
+  ],
+  "/Users/abc/A/vite2-vue3-ssr_steps/node_modules/vue/dist/vue.runtime.esm-bundler.js": [
+    "/assets/vendor.77a10beb.js"
+  ],
+  "/Users/abc/A/vite2-vue3-ssr_steps/node_modules/vuex-router-sync/dist/vuex-router-sync.esm-bundler.js": [
+    "/assets/vendor.77a10beb.js"
+  ],
+  "/Users/abc/A/vite2-vue3-ssr_steps/node_modules/vue-router/dist/vue-router.esm-bundler.js": [
+    "/assets/vendor.77a10beb.js"
+  ],
+  "/Users/abc/A/vite2-vue3-ssr_steps/src/views/Home.vue?vue&type=script&lang.ts": [
+    "/assets/Home.647a2698.js"
+  ],
+  "/Users/abc/A/vite2-vue3-ssr_steps/src/views/Home.vue": [
+    "/assets/Home.647a2698.js"
+  ],
+  "/Users/abc/A/vite2-vue3-ssr_steps/src/views/About.vue": [
+    "/assets/About.808fe96d.js"
+  ],
+  "/Users/abc/A/vite2-vue3-ssr_steps/src/views/404.vue": [
+    "/assets/404.d1e8793f.js"
+  ]
+}

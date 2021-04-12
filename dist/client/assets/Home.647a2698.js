@@ -1,0 +1,1 @@
+import{u as s}from"./index.8bac2502.js";import{d as a,o as e,c as t,a as r,t as o,F as n}from"./vendor.77a10beb.js";var d=a({setup:()=>({store:s()}),asyncData:({store:s})=>s.dispatch("fetchMessage")});const u=r("div",null,"Home Page",-1);d.render=function(s,a,d,c,i,l){return e(),t(n,null,[u,r("div",null,o(s.store.state.message),1)],64)};export default d;
